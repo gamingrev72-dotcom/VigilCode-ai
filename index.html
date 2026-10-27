@@ -34,123 +34,121 @@
         .glass-panel { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
     </style>
 </head>
-<body class="h-screen flex flex-col overflow-hidden select-none">
+<body class="min-h-screen md:h-screen flex flex-col overflow-x-hidden md:overflow-hidden select-none">
 
     <!-- Top Navigation Bar -->
-    <header class="h-16 border-b border-gray-800 bg-gray-950/80 backdrop-blur-md flex items-center justify-between px-6 z-50">
+    <header class="min-h-[4rem] border-b border-gray-800 bg-gray-950/80 backdrop-blur-md flex flex-wrap items-center justify-between px-4 md:px-6 py-2 md:py-0 z-50 gap-2">
         <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
-                <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 md:w-5 md:h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
             </div>
             <div>
                 <div class="flex items-center gap-2">
-                    <span class="font-bold tracking-wider text-white text-base">VIGILCODE<span class="text-emerald-400">-AI</span></span>
-                    <span class="text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full font-mono font-medium">v3.0-PROD</span>
+                    <span class="font-bold tracking-wider text-white text-sm md:text-base">VIGILCODE<span class="text-emerald-400">-AI</span></span>
+                    <span class="text-[9px] md:text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-1.5 md:px-2 py-0.5 rounded-full font-mono font-medium">v3.0-PROD</span>
                 </div>
-                <p class="text-xs text-gray-400">Multi-Language Autonomous AST Heuristic & Vulnerability Engine</p>
+                <p class="text-[10px] md:text-xs text-gray-400 hidden sm:block">Multi-Language Autonomous AST Heuristic & Vulnerability Engine</p>
             </div>
         </div>
 
-        <div class="flex items-center gap-4">
-            <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 border border-gray-800 text-xs text-gray-300">
+        <div class="flex items-center gap-2 md:gap-4">
+            <div class="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-3 py-1 md:py-1.5 rounded-full bg-gray-900 border border-gray-800 text-[10px] md:text-xs text-gray-300">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>Engine Status: <strong class="text-white">ONLINE</strong></span>
+                <span>Engine: <strong class="text-white">ONLINE</strong></span>
             </div>
-            <a href="https://github.com" target="_blank" class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-all border border-gray-700 shadow-sm">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>Star on GitHub</span>
+            <a href="https://github.com/gamingrev72-dotcom/VigilCode-ai" target="_blank" class="flex items-center gap-1.5 md:gap-2 bg-gray-800 hover:bg-gray-700 text-white text-[10px] md:text-xs font-semibold px-2.5 md:px-4 py-1.5 md:py-2 rounded-lg transition-all border border-gray-700 shadow-sm">
+                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span class="hidden sm:inline">Star on GitHub</span>
             </a>
         </div>
     </header>
 
     <!-- Main Workspace Area -->
-    <main class="flex-1 flex overflow-hidden">
+    <main class="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden">
 
         <!-- Left Panel: Code Input & Editor -->
-        <section class="w-1/2 flex flex-col border-r border-gray-800 bg-gray-950">
+        <section class="w-full md:w-1/2 flex flex-col border-b md:border-b-0 md:border-r border-gray-800 bg-gray-950 min-h-[350px] md:min-h-0">
             <!-- Toolbar -->
-            <div class="h-12 border-b border-gray-800 bg-gray-900/50 px-4 flex items-center justify-between">
-                <div class="flex items-center gap-2 overflow-x-auto py-1">
-                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Presets:</span>
-                    <button onclick="loadPreset('sqli')" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">JS SQLi</button>
-                    <button onclick="loadPreset('python_sql')" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">Python SQLi</button>
-                    <button onclick="loadPreset('apikey')" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">AWS Key Leak</button>
-                    <button onclick="loadPreset('xss')" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">XSS Flaw</button>
+            <div class="h-12 border-b border-gray-800 bg-gray-900/50 px-3 md:px-4 flex items-center justify-between gap-2 overflow-x-auto">
+                <div class="flex items-center gap-1.5 md:gap-2 shrink-0">
+                    <span class="text-[10px] md:text-xs font-semibold text-gray-400 uppercase tracking-wider">Presets:</span>
+                    <button onclick="loadPreset('sqli')" class="text-[10px] md:text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2 md:px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">JS SQLi</button>
+                    <button onclick="loadPreset('python_sql')" class="text-[10px] md:text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2 md:px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">Py SQLi</button>
+                    <button onclick="loadPreset('apikey')" class="text-[10px] md:text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2 md:px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">AWS Key</button>
+                    <button onclick="loadPreset('xss')" class="text-[10px] md:text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 px-2 md:px-2.5 py-1 rounded border border-gray-700 transition whitespace-nowrap">XSS</button>
                 </div>
-                <button onclick="clearEditor()" class="text-xs text-gray-400 hover:text-red-400 transition ml-2">Clear</button>
+                <button onclick="clearEditor()" class="text-xs text-gray-400 hover:text-red-400 transition shrink-0 ml-auto">Clear</button>
             </div>
 
             <!-- Editor Wrapper -->
-            <div class="flex-1 flex overflow-hidden relative">
-                <div id="lineNumbers" class="w-12 py-4 bg-gray-950 text-right pr-3 select-none text-gray-600 code-font text-sm border-r border-gray-900 leading-6">
+            <div class="flex-1 flex overflow-hidden relative min-h-[220px]">
+                <div id="lineNumbers" class="w-10 md:w-12 py-4 bg-gray-950 text-right pr-2 md:pr-3 select-none text-gray-600 code-font text-xs md:text-sm border-r border-gray-900 leading-6 shrink-0">
                     1
                 </div>
-                <textarea id="codeEditor" spellcheck="false" oninput="handleInput()" class="flex-1 bg-transparent py-4 px-4 code-font text-sm text-gray-200 resize-none focus:outline-none leading-6 placeholder-gray-700" placeholder="// Paste source code here for multi-language AST security audit..."></textarea>
+                <textarea id="codeEditor" spellcheck="false" oninput="handleInput()" class="flex-1 bg-transparent py-4 px-3 md:px-4 code-font text-xs md:text-sm text-gray-200 resize-none focus:outline-none leading-6 placeholder-gray-700" placeholder="// Paste source code here for multi-language AST security audit..."></textarea>
             </div>
 
             <!-- Footer Stats -->
-            <div class="h-8 border-t border-gray-900 bg-gray-950 px-4 flex items-center justify-between text-xs text-gray-500 font-mono">
+            <div class="h-8 border-t border-gray-900 bg-gray-950 px-3 md:px-4 flex items-center justify-between text-[10px] md:text-xs text-gray-500 font-mono">
                 <div id="editorMetrics">Lines: 0 | Chars: 0</div>
-                <div>Engine: Multi-Lang AST Regex Scanner</div>
+                <div class="hidden sm:block">Engine: Multi-Lang AST Regex Scanner</div>
             </div>
         </section>
 
         <!-- Right Panel: Real-time Analysis Dashboard -->
-        <section class="w-1/2 flex flex-col bg-gray-900/40 overflow-y-auto p-6 space-y-6">
+        <section class="w-full md:w-1/2 flex flex-col bg-gray-900/40 overflow-y-auto p-4 md:p-6 space-y-4 md:space-y-6">
 
             <!-- Security Gauge & Summary Header -->
-            <div class="grid grid-cols-3 gap-4">
-                <div class="col-span-1 glass-panel p-5 rounded-xl flex flex-col items-center justify-center relative">
-                    <svg class="w-28 h-28 transform -rotate-90" viewBox="0 0 36 36">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="sm:col-span-1 glass-panel p-4 md:p-5 rounded-xl flex flex-col items-center justify-center relative min-h-[140px]">
+                    <svg class="w-24 h-24 md:w-28 md:h-28 transform -rotate-90" viewBox="0 0 36 36">
                         <path class="text-gray-800" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                         <path id="gaugeCircle" class="text-emerald-500 transition-all duration-700 ease-out" stroke-dasharray="100, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                     </svg>
                     <div class="absolute inset-0 flex flex-col items-center justify-center">
-                        <span id="scoreText" class="text-3xl font-bold text-white tracking-tight">100</span>
-                        <span class="text-[10px] uppercase font-semibold tracking-wider text-gray-400">Security Index</span>
+                        <span id="scoreText" class="text-2xl md:text-3xl font-bold text-white tracking-tight">100</span>
+                        <span class="text-[9px] md:text-[10px] uppercase font-semibold tracking-wider text-gray-400">Security Index</span>
                     </div>
                 </div>
 
-                <div class="col-span-2 glass-panel p-5 rounded-xl flex flex-col justify-between">
+                <div class="sm:col-span-2 glass-panel p-4 md:p-5 rounded-xl flex flex-col justify-between gap-3">
                     <div>
-                        <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-2">Audit Summary Overview</h3>
-                        <p id="statusHeading" class="text-base font-bold text-emerald-400">System Healthy. Zero Vulnerabilities Detected.</p>
-                        <p class="text-xs text-gray-400 mt-1">Real-time heuristics analysis active across JS, Python, and Config layers.</p>
+                        <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 md:mb-2">Audit Summary Overview</h3>
+                        <p id="statusHeading" class="text-sm md:text-base font-bold text-emerald-400">System Healthy. Zero Vulnerabilities Detected.</p>
+                        <p class="text-[11px] md:text-xs text-gray-400 mt-1">Real-time heuristics analysis active across JS, Python, and Config layers.</p>
                     </div>
 
-                    <div class="grid grid-cols-3 gap-2 pt-2 border-t border-gray-800/60">
+                    <div class="grid grid-cols-3 gap-2 pt-2 border-t border-gray-800/60 text-center sm:text-left">
                         <div>
-                            <span class="text-[10px] text-gray-500 uppercase block font-semibold">Critical</span>
-                            <span id="criticalCount" class="text-lg font-bold text-red-500">0</span>
+                            <span class="text-[9px] md:text-[10px] text-gray-500 uppercase block font-semibold">Critical</span>
+                            <span id="criticalCount" class="text-base md:text-lg font-bold text-red-500">0</span>
                         </div>
                         <div>
-                            <span class="text-[10px] text-gray-500 uppercase block font-semibold">Warnings</span>
-                            <span id="warningCount" class="text-lg font-bold text-amber-500">0</span>
+                            <span class="text-[9px] md:text-[10px] text-gray-500 uppercase block font-semibold">Warnings</span>
+                            <span id="warningCount" class="text-base md:text-lg font-bold text-amber-500">0</span>
                         </div>
                         <div>
-                            <span class="text-[10px] text-gray-500 uppercase block font-semibold">Passed Checks</span>
-                            <span id="passedCount" class="text-lg font-bold text-emerald-500">14</span>
+                            <span class="text-[9px] md:text-[10px] text-gray-500 uppercase block font-semibold">Passed Checks</span>
+                            <span id="passedCount" class="text-base md:text-lg font-bold text-emerald-500">14</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Detailed Finding List -->
-            <div class="glass-panel p-5 rounded-xl flex-1 flex flex-col">
+            <div class="glass-panel p-4 md:p-5 rounded-xl flex-1 flex flex-col min-h-[250px]">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-sm font-semibold text-gray-200 uppercase tracking-wider flex items-center gap-2">
-                        <span>Detected Vulnerabilities & Flaws</span>
-                        <span id="findingBadge" class="bg-gray-800 text-gray-400 text-xs px-2 py-0.5 rounded-full font-mono">0 Issues</span>
+                    <h3 class="text-xs md:text-sm font-semibold text-gray-200 uppercase tracking-wider flex items-center gap-2">
+                        <span>Detected Flaws</span>
+                        <span id="findingBadge" class="bg-gray-800 text-gray-400 text-[10px] md:text-xs px-2 py-0.5 rounded-full font-mono">0 Issues</span>
                     </h3>
-                    <div class="flex gap-2">
-                        <button onclick="exportReport()" class="text-xs bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 px-3 py-1.5 rounded-lg transition font-medium">Export JSON</button>
-                    </div>
+                    <button onclick="exportReport()" class="text-[10px] md:text-xs bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 px-2.5 md:px-3 py-1 md:py-1.5 rounded-lg transition font-medium">Export JSON</button>
                 </div>
 
                 <div id="findingsContainer" class="flex-1 space-y-3 overflow-y-auto pr-1">
-                    <div class="p-8 text-center border border-dashed border-gray-800 rounded-lg text-gray-500 text-xs">
+                    <div class="p-6 md:p-8 text-center border border-dashed border-gray-800 rounded-lg text-gray-500 text-xs">
                         No findings detected. Select a preset or paste code into the source buffer.
                     </div>
                 </div>
@@ -279,7 +277,7 @@ function renderUserProfile(userData) {
             document.getElementById('criticalCount').innerText = '0';
             document.getElementById('warningCount').innerText = '0';
             document.getElementById('findingBadge').innerText = '0 Issues';
-            document.getElementById('findingsContainer').innerHTML = `<div class="p-8 text-center border border-dashed border-gray-800 rounded-lg text-gray-500 text-xs">No findings detected. Select a preset or paste code into the source buffer.</div>`;
+            document.getElementById('findingsContainer').innerHTML = `<div class="p-6 md:p-8 text-center border border-dashed border-gray-800 rounded-lg text-gray-500 text-xs">No findings detected. Select a preset or paste code into the source buffer.</div>`;
         }
 
         function renderResults(issues) {
@@ -302,24 +300,24 @@ function renderUserProfile(userData) {
             if (score < 50) {
                 gauge.className = 'text-red-500 transition-all duration-700 ease-out';
                 statusHeading.innerText = 'Critical Security Hazards Detected!';
-                statusHeading.className = 'text-base font-bold text-red-500';
+                statusHeading.className = 'text-sm md:text-base font-bold text-red-500';
             } else if (score < 85) {
                 gauge.className = 'text-amber-500 transition-all duration-700 ease-out';
                 statusHeading.innerText = 'Security Warnings Found. Action Required.';
-                statusHeading.className = 'text-base font-bold text-amber-500';
+                statusHeading.className = 'text-sm md:text-base font-bold text-amber-500';
             } else {
                 gauge.className = 'text-emerald-500 transition-all duration-700 ease-out';
                 statusHeading.innerText = 'System Healthy. Low Risk Profile.';
-                statusHeading.className = 'text-base font-bold text-emerald-400';
+                statusHeading.className = 'text-sm md:text-base font-bold text-emerald-400';
             }
 
             if (issues.length === 0) {
-                container.innerHTML = `<div class="p-8 text-center border border-dashed border-emerald-900/40 bg-emerald-950/10 rounded-lg text-emerald-400 text-xs">Passed AST Static Checks. No Known Pattern Matches Triggered.</div>`;
+                container.innerHTML = `<div class="p-6 md:p-8 text-center border border-dashed border-emerald-900/40 bg-emerald-950/10 rounded-lg text-emerald-400 text-xs">Passed AST Static Checks. No Known Pattern Matches Triggered.</div>`;
                 return;
             }
 
             container.innerHTML = issues.map(issue => `
-                <div class="p-4 rounded-lg bg-gray-950 border border-gray-800 flex flex-col gap-2">
+                <div class="p-3 md:p-4 rounded-lg bg-gray-950 border border-gray-800 flex flex-col gap-2">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase ${issue.severity === 'CRITICAL' ? 'bg-red-500/20 text-red-400 border border-red-500/30' : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'}">
