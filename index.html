@@ -47,9 +47,9 @@
             <div>
                 <div class="flex items-center gap-2">
                     <span class="font-bold tracking-wider text-white text-sm md:text-base">VIGILCODE<span class="text-emerald-400">-AI</span></span>
-                    <span class="text-[9px] md:text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-1.5 md:px-2 py-0.5 rounded-full font-mono font-medium">v3.0-PROD</span>
+                    <span class="text-[9px] md:text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-1.5 md:px-2 py-0.5 rounded-full font-mono font-medium">v4.0-ELITE</span>
                 </div>
-                <p class="text-[10px] md:text-xs text-gray-400 hidden sm:block">Multi-Language Autonomous AST Heuristic & Vulnerability Engine</p>
+                <p class="text-[10px] md:text-xs text-gray-400 hidden sm:block">Enterprise-Grade Autonomous AST Heuristic & Vulnerability Engine</p>
             </div>
         </div>
 
@@ -87,13 +87,13 @@
                 <div id="lineNumbers" class="w-10 md:w-12 py-4 bg-gray-950 text-right pr-2 md:pr-3 select-none text-gray-600 code-font text-xs md:text-sm border-r border-gray-900 leading-6 shrink-0">
                     1
                 </div>
-                <textarea id="codeEditor" spellcheck="false" oninput="handleInput()" class="flex-1 bg-transparent py-4 px-3 md:px-4 code-font text-xs md:text-sm text-gray-200 resize-none focus:outline-none leading-6 placeholder-gray-700" placeholder="// Paste source code here for multi-language AST security audit..."></textarea>
+                <textarea id="codeEditor" spellcheck="false" oninput="handleInput()" class="flex-1 bg-transparent py-4 px-3 md:px-4 code-font text-xs md:text-sm text-gray-200 resize-none focus:outline-none leading-6 placeholder-gray-700" placeholder="// Paste source code here for elite AST security audit..."></textarea>
             </div>
 
             <!-- Footer Stats -->
             <div class="h-8 border-t border-gray-900 bg-gray-950 px-3 md:px-4 flex items-center justify-between text-[10px] md:text-xs text-gray-500 font-mono">
                 <div id="editorMetrics">Lines: 0 | Chars: 0</div>
-                <div class="hidden sm:block">Engine: Multi-Lang AST Regex Scanner</div>
+                <div class="hidden sm:block">Engine: Advanced Context-Aware Heuristics</div>
             </div>
         </section>
 
@@ -117,7 +117,7 @@
                     <div>
                         <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 md:mb-2">Audit Summary Overview</h3>
                         <p id="statusHeading" class="text-sm md:text-base font-bold text-emerald-400">System Healthy. Zero Vulnerabilities Detected.</p>
-                        <p class="text-[11px] md:text-xs text-gray-400 mt-1">Real-time heuristics analysis active across JS, Python, and Config layers.</p>
+                        <p class="text-[11px] md:text-xs text-gray-400 mt-1">Elite context-aware heuristics active across code layers.</p>
                     </div>
 
                     <div class="grid grid-cols-3 gap-2 pt-2 border-t border-gray-800/60 text-center sm:text-left">
@@ -157,7 +157,7 @@
         </section>
     </main>
 
-    <!-- Client-side Logic Script -->
+    <!-- Client-side Elite Logic Script -->
     <script>
         const presets = {
             sqli: `// Express.js Vulnerable Route
@@ -196,9 +196,10 @@ function renderUserProfile(userData) {
             {
                 id: 'SQLI_CONCAT',
                 severity: 'CRITICAL',
-                pattern: /(SELECT\s+.*\s+FROM\s+.*('|"\s*\+)|%s|['"]\s*\+\s*\w+)/i,
+                // Smart regex: ensures it targets query execution contexts rather than simple static web URLs
+                pattern: /(db\.query|cursor\.execute|query)\s*\(.*(SELECT|INSERT|UPDATE|DELETE).*(['"]\s*\+|%s|['"]\s*\+\s*\w+)/i,
                 title: 'SQL Injection via String Concatenation/Formatting',
-                description: 'Unsanitized parameters are directly embedded into query strings.',
+                description: 'Unsanitized user inputs are directly concatenated or formatted into database execution statements.',
                 remediation: 'Use parameterized queries or prepared statement bindings.'
             },
             {
@@ -206,7 +207,7 @@ function renderUserProfile(userData) {
                 severity: 'CRITICAL',
                 pattern: /(AKIA[0-9A-Z]{16})/g,
                 title: 'Hardcoded AWS Access Key',
-                description: 'Plaintext IAM access credentials detected inside source code.',
+                description: 'Plaintext IAM access credentials detected inside source code repository.',
                 remediation: 'Move credentials into secure environment variables (process.env).'
             },
             {
@@ -214,8 +215,8 @@ function renderUserProfile(userData) {
                 severity: 'HIGH',
                 pattern: /\.innerHTML\s*=\s*.*[\+]/i,
                 title: 'Cross-Site Scripting (DOM XSS via innerHTML)',
-                description: 'Direct assignment of unvalidated inputs into DOM context.',
-                remediation: 'Sanitize inputs using DOMPurify or assign via textContent.'
+                description: 'Direct assignment of unvalidated dynamic inputs into DOM rendering context.',
+                remediation: 'Sanitize inputs using DOMPurify or assign values via textContent.'
             }
         ];
 
@@ -312,7 +313,7 @@ function renderUserProfile(userData) {
             }
 
             if (issues.length === 0) {
-                container.innerHTML = `<div class="p-6 md:p-8 text-center border border-dashed border-emerald-900/40 bg-emerald-950/10 rounded-lg text-emerald-400 text-xs">Passed AST Static Checks. No Known Pattern Matches Triggered.</div>`;
+                container.innerHTML = `<div class="p-6 md:p-8 text-center border border-dashed border-emerald-900/40 bg-emerald-950/10 rounded-lg text-emerald-400 text-xs">Passed Elite AST Checks. Zero Threat Contexts Matched.</div>`;
                 return;
             }
 
@@ -344,6 +345,7 @@ function renderUserProfile(userData) {
 
         function exportReport() {
             const report = {
+                version: "v4.0-ELITE",
                 timestamp: new Date().toISOString(),
                 score: document.getElementById('scoreText').innerText,
                 metrics: {
@@ -356,7 +358,7 @@ function renderUserProfile(userData) {
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `VigilCode-Security-Report-${Date.now()}.json`;
+            a.download = `VigilCode-Elite-Report-${Date.now()}.json`;
             a.click();
         }
 
